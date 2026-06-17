@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel Administrativo | Pesquisa Legal One</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-topbar">
+  <div class="admin-topbar__inner">
+    <div class="admin-brand">
+      <div class="admin-brand__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+      </div>
+      <div>
+        <div class="admin-brand__title">Painel de Satisfação — Legal One</div>
+        <div class="admin-brand__sub">Acesso restrito</div>
+      </div>
+    </div>
+    <div class="admin-topbar__actions">
+      <span class="status-pill is-local" id="statusPill"><span class="dot"></span> Verificando fonte de dados...</span>
+      <button class="btn btn-ghost" id="refreshBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+        Atualizar
+      </button>
+      <button class="btn btn-primary" id="exportBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        Exportar (Excel/CSV)
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="admin-main" id="adminMain">
+  <div class="admin-state">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    <h2>Carregando respostas...</h2>
+    <p>Buscando dados da planilha conectada.</p>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="../config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
