@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Relacionamento e Retenção de Clientes | Legal One</title>
+<meta name="description" content="Pesquisa de satisfação e retenção de clientes do sistema Legal One. Sua opinião nos ajuda a aprimorar sua experiência.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#survey" class="skip-link">Ir para o formulário</a>
+
+<!-- Faixa institucional -->
+<div class="top-strip">
+  <div class="top-strip__inner">
+    <span>Programa de Relacionamento &amp; Retenção · Clientes Legal One</span>
+    <span>Tempo médio de resposta: 4 minutos</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <div class="brand">
+      <div class="brand__logo-slot" aria-hidden="true">
+        <!-- Área reservada para o logo do escritório -->
+        <img src="Legal One.png" alt="Logo Legal One Suporte" class="brand__logo">
+      </div>
+      <div class="brand__text">
+        <span class="brand__office">Legal One</span>
+        <span class="brand__tag">Integração Legal One</span>
+      </div>
+    </div>
+    <div class="navbar__meta">Canal exclusivo para clientes</div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__inner">
+    <div>
+      <p class="hero__eyebrow">Pesquisa de satisfação 2026</p>
+      <h1>Pesquisa de Relacionamento e Retenção de Clientes</h1>
+      <p class="lead">Sua opinião é essencial para aprimorarmos sua experiência com o sistema Legal One.</p>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <strong>~4 min</strong>
+        <span>Tempo de preenchimento</span>
+      </div>
+      <div class="hero__stat">
+        <strong>7 etapas</strong>
+        <span>Objetivas e rápidas</span>
+      </div>
+      <div class="hero__stat">
+        <strong>100%</strong>
+        <span>Confidencial e seguro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conteúdo principal -->
+<main class="page">
+
+  <!-- Trilho de progresso lateral -->
+  <aside class="rail" aria-hidden="true">
+    <div class="rail__card">
+      <p class="rail__title">Andamento da pesquisa</p>
+      <ol class="rail__list" id="railList">
+        <li class="rail__item" data-section="s1">Escritório</li>
+        <li class="rail__item" data-section="s2">CPF/CNPJ</li>
+        <li class="rail__item" data-section="s3">Responsável</li>
+        <li class="rail__item" data-section="s4">Módulos em uso</li>
+        <li class="rail__item" data-section="s5">Módulos de interesse</li>
+        <li class="rail__item" data-section="s6">Avaliação</li>
+        <li class="rail__item" data-section="s7">Apoio imediato</li>
+      </ol>
+      <p class="rail__progress-label"><strong id="progressPercent">0%</strong> concluído</p>
+    </div>
+  </aside>
+
+  <!-- Formulário -->
+  <form id="survey" novalidate>
+
+    <!-- 1. Escritório -->
+    <section class="section-card" id="s1">
+      <div class="section-card__head">
+        <span class="section-card__num">1</span>
+        <div>
+          <h2 class="section-card__title">Dados do escritório</h2>
+          <p class="section-card__hint">Identificação básica de quem está respondendo.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="officeName">Nome do escritório <span class="req-mark">*</span></label>
+        <input type="text" id="officeName" name="officeName" placeholder="Ex.: Almeida &amp; Souza Advogados" required>
+        <span class="field__error" id="err-officeName">⚠ Informe o nome do escritório.</span>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="cnpj">CPF/CNPJ <span class="opt-mark">opcional</span></label>
+        <input type="text" id="cnpj" name="cnpj" placeholder="000.000.000-00 ou 00.000.000/0000-00" inputmode="numeric" maxlength="18">
+        <span class="field__error" id="err-cnpj">⚠ Informe um CPF ou CNPJ válido.</span>
+        <span class="field__help">Usado apenas para identificarmos o contrato vigente.</span>
+      </div>
+    </section>
+
+    <!-- 3. Usuário (mantemos numeração visual sequencial 1-7 nos cards, mas o campo 2 do briefing — CNPJ — está dentro do card 1) -->
+    <section class="section-card" id="s3">
+      <div class="section-card__head">
+        <span class="section-card__num">2</span>
+        <div>
+          <h2 class="section-card__title">Responsável pela resposta</h2>
+          <p class="section-card__hint">Nome da pessoa que está respondendo a esta pesquisa.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="userName">Nome do usuário <span class="req-mark">*</span></label>
+        <input type="text" id="userName" name="userName" placeholder="Seu nome completo" required>
+        <span class="field__error" id="err-userName">⚠ Informe seu nome.</span>
+      </div>
+    </section>
+
+    <!-- 4. Módulos mais utilizados -->
+    <section class="section-card" id="s4">
+      <div class="section-card__head">
+        <span class="section-card__num">3</span>
+        <div>
+          <h2 class="section-card__title">Módulos mais utilizados</h2>
+          <p class="section-card__hint">Selecione todos os módulos que o escritório utiliza atualmente. <span class="req-mark">*</span></p>
+        </div>
+      </div>
+
+      <div class="check-grid" id="modulesUsedGrid" role="group" aria-labelledby="s4title"></div>
+      <span class="field__error" id="err-modulesUsed" style="margin-top:12px;">⚠ Selecione ao menos um módulo utilizado.</span>
+    </section>
+
+    <!-- 5. Módulos de interesse -->
+    <section class="section-card" id="s5">
+      <div class="section-card__head">
+        <span class="section-card__num">4</span>
+        <div>
+          <h2 class="section-card__title">Módulos de interesse para expansão</h2>
+          <p class="section-card__hint">Quais módulos seriam interessantes começar a utilizar? <span class="opt-mark">opcional</span></p>
+        </div>
+      </div>
+
+      <div class="check-grid" id="modulesInterestGrid" role="group" aria-labelledby="s5title"></div>
+    </section>
+
+    <!-- 6. Avaliação -->
+    <section class="section-card" id="s6">
+      <div class="section-card__head">
+        <span class="section-card__num">5</span>
+        <div>
+          <h2 class="section-card__title">Avaliação do sistema e do suporte</h2>
+          <p class="section-card__hint">Dê uma nota de 1 a 10 para cada item.</p>
+        </div>
+      </div>
+
+      <div class="rating-block">
+        <p class="rating-block__title">Avaliação do sistema Legal One <span class="req-mark">*</span></p>
+        <p class="rating-block__sub">Considere desempenho, usabilidade e estabilidade.</p>
+        <div class="stars" id="starsSystem" role="radiogroup" aria-label="Nota do sistema Legal One, de 1 a 10"></div>
+        <input type="hidden" id="ratingSystem" name="ratingSystem" required>
+        <span class="field__error" id="err-ratingSystem">⚠ Selecione uma nota de 1 a 10.</span>
+
+        <div class="field">
+          <label class="field__label" for="justifySystem">Gostaria de justificar sua nota? <span class="opt-mark">opcional</span></label>
+          <textarea id="justifySystem" name="justifySystem" placeholder="Conte um pouco mais sobre sua avaliação..."></textarea>
+        </div>
+      </div>
+
+      <div class="rating-block">
+        <p class="rating-block__title">Avaliação do suporte de atendimento <span class="req-mark">*</span></p>
+        <p class="rating-block__sub">Considere agilidade, clareza e resolução dos chamados.</p>
+        <div class="stars" id="starsSupport" role="radiogroup" aria-label="Nota do suporte de atendimento, de 1 a 10"></div>
+        <input type="hidden" id="ratingSupport" name="ratingSupport" required>
+        <span class="field__error" id="err-ratingSupport">⚠ Selecione uma nota de 1 a 10.</span>
+
+        <div class="field">
+          <label class="field__label" for="justifySupport">Gostaria de justificar sua nota? <span class="opt-mark">opcional</span></label>
+          <textarea id="justifySupport" name="justifySupport" placeholder="Conte um pouco mais sobre sua avaliação..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Apoio imediato -->
+    <section class="section-card" id="s7">
+      <div class="section-card__head">
+        <span class="section-card__num">6</span>
+        <div>
+          <h2 class="section-card__title">Apoio imediato</h2>
+          <p class="section-card__hint">Você precisa de apoio imediato da nossa equipe? <span class="req-mark">*</span></p>
+        </div>
+      </div>
+
+      <div class="radio-row" role="radiogroup" aria-label="Necessita de apoio imediato?">
+        <div class="radio-pill" data-variant="yes">
+          <input type="radio" id="supportYes" name="needSupport" value="sim" required>
+          <label for="supportYes">Sim, preciso de contato</label>
+        </div>
+        <div class="radio-pill" data-variant="no">
+          <input type="radio" id="supportNo" name="needSupport" value="nao">
+          <label for="supportNo">Não, está tudo bem</label>
+        </div>
+      </div>
+      <span class="field__error" id="err-needSupport">⚠ Selecione uma das opções.</span>
+
+      <div class="contact-reveal" id="contactReveal">
+        <div class="field">
+          <label class="field__label" for="contactInfo">Informe seu telefone ou e-mail para contato <span class="req-mark">*</span></label>
+          <input type="text" id="contactInfo" name="contactInfo" placeholder="(51) 99999-9999 ou nome@escritorio.com.br">
+          <span class="field__error" id="err-contactInfo">⚠ Informe um telefone ou e-mail válido.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Envio -->
+    <div class="submit-bar">
+      <p class="submit-bar__text">Ao enviar, suas respostas serão registradas com data e hora para análise da nossa equipe de relacionamento.</p>
+      <button type="submit" class="btn btn-primary" id="submitBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        Enviar Pesquisa
+      </button>
+    </div>
+
+  </form>
+</main>
+
+<!-- Overlay de sucesso -->
+<div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+  <div class="success-card">
+    <div class="success-card__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <h2 id="successTitle">Pesquisa enviada com sucesso</h2>
+    <p>Agradecemos sua participação! Nossa equipe analisará suas respostas e entrará em contato caso necessário.</p>
+    <button type="button" class="btn btn-primary" id="closeSuccessBtn">Concluir</button>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__col">
+      <p class="site-footer__brand">Programa de Relacionamento Legal One</p>
+      <p>Ferramenta interna de retenção e satisfação de clientes, desenvolvida para acompanhar a experiência de uso do sistema Legal One e identificar oportunidades de evolução.</p>
+    </div>
+    <div class="site-footer__col">
+      <h4>Contato</h4>
+      <a class="site-footer__contact-line site-footer__contact-link" href="mailto:suporte.legalone@teksul.com.br">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+        <span>suporte.legalone@teksul.com.br</span>
+      </a>
+      <!-- Troque o número abaixo pelo WhatsApp real do escritório, sempre com código do país (55) + DDD, sem espaços/símbolos -->
+      <a class="site-footer__contact-line site-footer__contact-link" href="https://wa.me/555437710909" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92"/></svg>
+        <span>(54) 3771-0909 · WhatsApp</span>
+      </a>
+    </div>
+  </div>
+  <div class="top-strip__inner site-footer__bottom" style="max-width:1180px;margin:0 auto;padding:0 24px;">
+    <span>© 2026 — Ferramenta de Retenção de Clientes</span>
+    <span>Dados tratados conforme a LGPD</span>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
