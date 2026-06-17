@@ -17,7 +17,7 @@
  *    GOOGLE_SHEETS_WEBAPP_URL no config.js do site.
  */
 
-const SECRET = ""; // opcional — deixe igual ao GOOGLE_SHEETS_SECRET do site, ou deixe vazio nos dois lados
+const SECRET = "legalonecs2026"; // opcional — deixe igual ao GOOGLE_SHEETS_SECRET do site, ou deixe vazio nos dois lados
 
 const SHEET_NAME = "Respostas";
 
