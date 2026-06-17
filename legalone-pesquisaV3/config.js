@@ -44,4 +44,4 @@ const GOOGLE_SHEETS_SECRET = "legalonecs2026";
 //
 // Hash correspondente à senha de exemplo "legalone2026" (TROQUE antes de publicar):
 const ADMIN_PASSWORD_HASH =
-  "801f2521677edae0faa73f566e947c5ae98b9499606a842b3fbab664a25f12e6";
+  "3378d62d03c21bb63c87fda4e69168127081d42752373bfce89a3b205d3b244a";
