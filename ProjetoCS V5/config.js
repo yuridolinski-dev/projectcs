@@ -12,7 +12,7 @@
 // Exemplo de URL válida:
 // "https://script.google.com/macros/s/AKfycb.../exec"
 
-const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwbe_vg0uR_CcDFmIh3-cWWDvSv8y-IF1F1caWOMBxA1HFFkn9XxRIe39_yh_UKsJl3/exec";
+const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyI3JM_vVAZQUVYPpg3ztNzj0JIJH02aMZj4ujH4qgUPk749JoouW5IsQS8938BJ520/exec";
 
 // Chave secreta opcional (mesma definida no Apps Script) para
 // reduzir o risco de outra pessoa enviar dados para sua planilha
